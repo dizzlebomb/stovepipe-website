@@ -16,8 +16,9 @@ The stovepipe-website repo needs a small set of docs so anyone can run, edit and
 
 The site is a single placeholder page with no docs, no commits and no hosting yet.
 
-- `index.html`: header, "Coming soon" hero, contact card, footer
-- `styles.css`: one stylesheet with color tokens on `:root`, automatic dark mode, mobile layout
+- `site-content/index.html`: logo and one line of contact text
+- `site-content/styles.css`: one stylesheet with color tokens on `:root`, automatic dark mode, Londrina Solid font
+- `site-content/fonts/`: the font file and its license
 - No build step, dependencies or tests
 - Gaps: no README, no deploy instructions, placeholder copy, and a placeholder contact address (`hello@stovepipeinteractive.com`)
 
@@ -41,8 +42,11 @@ All docs live in the repo as Markdown, so a doc change goes in the same commit a
 stovepipe-website/
 ├── README.md          # entry point, links to docs/
 ├── CHANGELOG.md
-├── index.html
-├── styles.css
+├── site-content/      # the published site
+│   ├── index.html
+│   ├── styles.css
+│   ├── stovepipelogo_transbacking.png
+│   └── fonts/
 └── docs/
     ├── documentation-plan.md   # this file
     ├── deployment.md
@@ -50,7 +54,7 @@ stovepipe-website/
     └── contributing.md
 ```
 
-Keep `docs/` out of the published site. The host should serve only `index.html`, `styles.css` and assets.
+Keep `docs/` out of the published site. The host should serve only the `site-content/` folder.
 
 ## Priorities and sequencing
 
